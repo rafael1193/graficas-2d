@@ -1,0 +1,41 @@
+﻿***v1.1.0.0***
+[Arreglado] "-" unario correctamente identificado
+[Nueva caracteristica] funciones negación (neg), máximo (max), mínimo (min), "y" lógico (and), "o" lógico (or) y "no" lógico (not)
+[Nueva caracteristica] clase SetOfPoints para dibujar puntos aislados
+***v1.0.0.0***
+
+***v0.9.1.0 (1.0 RC1)***
+[Arreglado] Con el nuevo método de dibujo se producia en ocasiones una excepción por desbordamiento
+
+***v0.9.0.0 (1.0 RC0)***
+Intérprete matematico infijo funcionando. Está completamente basado en .NET por lo que es compatible con Mono
+Los trozos de funciones que antes no se dibujaban ahora si se dibujan
+Ahora se dibuajan los valores de la cuadricula de la grafica en el eje X e Y
+Solucion de errores varios
+
+***v0.6.0.0***
+[Nueva caracteristica] Refactorizacion y mejora de la calculadora. Nuevo formato de uso (interfaz ICalculadora)
+[Nueva caracteristica] Nuevas operaciones: Coeficiente binomial [C], factorial [!], funcion módulo [mod], funcion signo [sgn], funcion parte entera [int], funcion "techo" [ceil], funcion "suelo" [floor],
+[Nueva caracteristica] Mejora en el control "Papel" para truncar los puntos que sobrepasan el limite del área GDI+ y los no dibujables
+[Nueva caracteristica] Intervalos con decimales.
+[Nueva caracteristica] Interprete Infijo (todavia incompleto. faltan operadores infijos)
+Se marcan como obsoletos los sistemas anteriores. Serán eliminados cuando los nuevos sean estables
+
+***v0.5.0.0***
+[Nueva caracteristica] Nuevo intérprete (muParser). Fin de la notación RPN
+
+***v0.4.1.0***
+[Bug resuelto] El error misterioso de desbordamiento en GDI está controlado
+[Nueva caracteristica] Reorganización de los espacios de nombres de la dll
+[Nueva caracteristica] Cambio de los operadores "raiz2" por "sqrt", "raiz3" por "cbrt" y "raiz" por "root"
+[Nueva caracteristica] Se ha añadido el numero aureo ("phi") a la calculadora
+[Nueva caracteristica] Mejora en el rendimiento del dibujado de funciones
+[Nueva caracteristica] Añadidas constantes "G" (constante de gravitación universal) y "c"(velocidad de la luz en el vacío) a la calculadora
+
+***v0.4.0.0***
+[Nueva caracteristica] Funciones paramétricas
+[Nueva caracteristica] El control por ratón y el control manual de la grafica funcionan en conjunto perfectamente
+[Nueva caracteristica] Inicio de las notas de la versión para "Graficas2D.Control.dll"
+[Nueva caracteristica] Refactorización de la estructura "Funcion" preparándola para admitir nuevos tipos de función
+[Nueva caracteristica] Parametro "T" en "CalculadoraRPN"
+[Bug resuelto] Las propiedades "Y","Z",y "W" de "CalculadoraRPN" devolvian el valor de "X". Ahora devuelven los valores corectos

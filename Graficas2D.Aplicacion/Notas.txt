@@ -1,0 +1,50 @@
+﻿***v1.0.0.0***
+
+***v0.9.1.0 (1.0 RC1)***
+[Arreglado] No se dibujaba la escala al guardar en imagen
+[Arreglado] Fallos en la interfaz en Windows XP
+
+***v0.9.0.0 (1.0 RC0)***
+Se retoma el desarrollo del programa
+Solucion de errores varios
+Se permite guardar y cargar funciones
+
+***v0.6.0.0***
+[Nueva caracteristica] Resolver sistemas de ecuaciones -> Se pueden introducir expresiones matematicas en los coeficientes 
+[Nueva caracteristica] Representar funcion derivada directamente desde la ventana "Hoja"
+[Nueva caracteristica] Nueva interfaz
+[Nueva caracteristica] Modo "alpha" en "Opciones"
+
+***v0.5.0.0***
+[Nueva caracteristica] Representar función derivada de otra
+
+***v0.4.1.0***
+[Nueva caracteristica] Apertura de funciones guardadas en archivos de texto (*.txt)
+[Bug resuelto] Carga correcta de "notas de la version" en sistemas Unix via Mono
+[Bug resuelto] Si se añade una funcion errónea en "AgregarForm" ahora se da un mensaje de error correcto
+
+***v0.4.0.0***
+[Nueva caracteristica] ¡Funciones paramétricas!
+[Nueva caracteristica] Añadidas notas de la versión de "Graficas2D.Control.dll"
+[Nueva caracteristica] Exportar funciones como texto
+[Nueva caracteristica] Peticion de confirmacion para salir del programa cuando hay ventanas abiertas
+[Nueva caracteristica] La opcion de graficar de la ventana de resolucion de ecuaciones dibuja ambos miembros de la ecuacion
+[Bug resuelto] El grosor de las funciones creadas por la ventana "Derivadas" era menor al normal
+[Bug resuelto] Comprobacion de entrada errónea en la ventana "Resolver ecuacion"
+
+***v0.3.3.0***
+[Nueva caracteristica] Zoom con la rueda del ratón sobre el papel y mas nivel de zoom (hasta 150)
+[Nueva caracteristica] La resolucion de ecuaciones admite ahora cualquier ecuacion sin tener que estar igualada a 0
+[Nueva caracteristica] secante(sec), cosecante(csc), cotangente(cot) y seno(senh), coseno(cosh), tangente(tanh), cosecante(csch), secante(sech) y cotangente(coth) hiperbólicos
+[Bug resuelto] Cuando se modifica una funcion, la funcion modificada conserva el estado de visibilidad anterior
+[Bug resuelto] Cuando se intenta crear una funcion con errores de sisntaxis, se crea una funcion vacia "y = "
+[Bug resuelto] El nombre original de la ventana grafica aparece en el cuadro de cambiar nombre
+[Bug resuelto] Comprobacion correcta de los intervalos de una función al añadirla
+[Bug resuelto] En ocasiones no se cargaba el archivo "Notas.txt" en la ventana de Notas de la version
+[Bug resuelto] Cuando la configuracion de colores de las ventanas de windows no es la Windows 7, el color de fondo de algunos formularios puede ser estridente
+[Bug resuelto] Si en la ventana de "Agregar función" se introduce una funcion erronea, la ventana no se cierra.
+
+***v0.3.2.0***
+Reordenamiento de menús
+Ventana: notas de la versión.
+Barra de ventanas

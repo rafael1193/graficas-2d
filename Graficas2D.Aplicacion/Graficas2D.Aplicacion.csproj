@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="2.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E5F29A7-36AC-4122-A528-B55959CB02B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Graficas2D.Aplicacion</RootNamespace>
+    <AssemblyName>Graficas 2D</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Graficas2D.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release64|x86'">
+    <OutputPath>bin\x86\Release64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release64|x64'">
+    <OutputPath>bin\x64\Release64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|x86'">
+    <OutputPath>bin\x86\Release32\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|x64'">
+    <OutputPath>bin\x64\Release32\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release64|AnyCPU'">
+    <OutputPath>bin\Release64\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release32|AnyCPU'">
+    <OutputPath>bin\Release32\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D68E54376CBDBD3203593A98A0720FD5A9E2FE25</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Graficas2D_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'muParser|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\muParser\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'muParser|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\muParser\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'muParser|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\muParser\</OutputPath>
+    <DefineConstants>TRACE;muParser</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcercaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaForm.Designer.cs">
+      <DependentUpon>AcercaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficaForm\Agregar2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficaForm\Agregar2Form.Designer.cs">
+      <DependentUpon>Agregar2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficaForm\Grafica2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficaForm\Grafica2Form.Designer.cs">
+      <DependentUpon>Grafica2Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calcular\LimitesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calcular\LimitesForm.Designer.cs">
+      <DependentUpon>LimitesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calcular\DerivadasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calcular\DerivadasForm.Designer.cs">
+      <DependentUpon>DerivadasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calcular\GaussForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calcular\GaussForm.Designer.cs">
+      <DependentUpon>GaussForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotasForm.Designer.cs">
+      <DependentUpon>NotasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcionesForm.Designer.cs">
+      <DependentUpon>OpcionesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Padre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Padre.Designer.cs">
+      <DependentUpon>Padre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Calcular\ResolverNewtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calcular\ResolverNewtonForm.Designer.cs">
+      <DependentUpon>ResolverNewtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calcular\RPNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calcular\RPNForm.Designer.cs">
+      <DependentUpon>RPNForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AcercaForm.resx">
+      <DependentUpon>AcercaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficaForm\Agregar2Form.resx">
+      <DependentUpon>Agregar2Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficaForm\Grafica2Form.resx">
+      <DependentUpon>Grafica2Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calcular\LimitesForm.resx">
+      <DependentUpon>LimitesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calcular\DerivadasForm.resx">
+      <DependentUpon>DerivadasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calcular\GaussForm.resx">
+      <DependentUpon>GaussForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotasForm.resx">
+      <DependentUpon>NotasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcionesForm.resx">
+      <DependentUpon>OpcionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Padre.resx">
+      <DependentUpon>Padre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Calcular\ResolverNewtonForm.resx">
+      <DependentUpon>ResolverNewtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calcular\RPNForm.resx">
+      <DependentUpon>RPNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Graficas2D_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-log-out1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono.ico" />
+    <Content Include="Notas.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\1285512315_function.gif" />
+    <Content Include="Resources\1285512643_chart-curve-icon.png" />
+    <Content Include="Resources\1285512653_chart-curve-icon.ico" />
+    <Content Include="Resources\1285512881_chart-curve-add-icon.ico" />
+    <None Include="Resources\plugin1.png" />
+    <None Include="Resources\chart_curve_add.png" />
+    <None Include="Resources\chart_curve_delete.png" />
+    <None Include="Resources\chart_curve_edit.png" />
+    <None Include="Resources\chart_curve_add1.png" />
+    <None Include="Resources\chart_curve_delete1.png" />
+    <None Include="Resources\chart_curve_edit1.png" />
+    <Content Include="Resources\Derivada.ico" />
+    <Content Include="Resources\icono.ico" />
+    <None Include="Resources\document-open.png" />
+    <None Include="Resources\applications-graphics.png" />
+    <None Include="Resources\media-floppy.png" />
+    <None Include="Resources\document-save.png" />
+    <None Include="Resources\accessories-calculator.png" />
+    <None Include="Resources\window-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Resources\1285512315_function.gif">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\1285512643_chart-curve-icon.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\1285512653_chart-curve-icon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\1285512881_chart-curve-add-icon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Graficas2D.Control\Graficas2D.Control.csproj">
+      <Project>{BB36BCA6-50C0-4ED1-B5A6-49DC0D2FDFD5}</Project>
+      <Name>Graficas2D.Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
