@@ -1,4 +1,7 @@
 ﻿***v1.0.0.0***
+[Nueva caracteristica] Minimal interface changes
+
+***v1.0.0.0***
 
 ***v0.9.1.0 (1.0 RC1)***
 [Arreglado] No se dibujaba la escala al guardar en imagen

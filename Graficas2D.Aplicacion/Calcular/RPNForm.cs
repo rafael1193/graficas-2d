@@ -64,8 +64,8 @@ namespace Graficas2D.Aplicacion
 
                 ans = num;
 
-                richTextBox1.Text = textBox1.Text + '\n' + richTextBox1.Text;
-                richTextBox1.Text = "-> " + (Math.Round(num,9)).ToString() + '\n' + richTextBox1.Text;
+                richTextBox1.Text = "<: " + textBox1.Text + '\n' + richTextBox1.Text;
+                richTextBox1.Text = ":> " + (num).ToString() + '\n' + richTextBox1.Text;
             }
             catch (Exception ex)
             {

@@ -1,4 +1,4 @@
-﻿/* Copyright (C) 2010, 2011 rafael1193
+﻿/* Copyright (C) 2010, 2011, 2012 rafael1193
  * 
  * This file is part of Graficas2D.Control
  * 

@@ -1,4 +1,4 @@
-﻿/* Copyright (C) 2010, 2011  rafael1193
+﻿/* Copyright (C) 2010, 2011, 2012  rafael1193
  * 
  * This file is part of Graficas2D.Control
  * 
@@ -192,8 +192,8 @@ namespace Graficas2D.Control
 			DefinirOperacion("%", OperacionesMatematicas.Modulo, 4, Asociatividad.Izquierda);
 			DefinirOperacion("^", OperacionesMatematicas.Potencia, 5, Asociatividad.Izquierda);
 			DefinirOperacion("C", OperacionesMatematicas.Potencia, 6, Asociatividad.Izquierda);
-			DefinirOperacion("|", OperacionesMatematicas.LogicalOr, 7, Asociatividad.Izquierda);			
-			DefinirOperacion("&", OperacionesMatematicas.LogicalAnd, 8, Asociatividad.Izquierda);
+			DefinirOperacion("|", OperacionesMatematicas.LogicalOr, 7, Asociatividad.Derecha);			
+			DefinirOperacion("&", OperacionesMatematicas.LogicalAnd, 8, Asociatividad.Derecha);
 			
 			post.Add("!", new OperadorPostfijoDelegate(OperacionesMatematicas.Factorial));
 
@@ -436,7 +436,7 @@ namespace Graficas2D.Control
 					{
 						if (stack.Count > 0)
 						{
-							while (stack.Peek().Tipo == TipoToken.Operador && ((asoc[tok.Cadena] == Asociatividad.Izquierda && preced[tok.Cadena] < preced[stack.Peek().Cadena]) || (asoc[tok.Cadena] == Asociatividad.Derecha && preced[tok.Cadena] < preced[stack.Peek().Cadena])))
+							while (stack.Peek().Tipo == TipoToken.Operador && ((asoc[tok.Cadena] == Asociatividad.Izquierda && preced[tok.Cadena] <= preced[stack.Peek().Cadena]) || (asoc[tok.Cadena] == Asociatividad.Derecha && preced[tok.Cadena] <= preced[stack.Peek().Cadena])))
 							{
 								output.Append(stack.Pop().Cadena + " ");
 								if (stack.Count <= 0) break;
@@ -735,7 +735,13 @@ namespace Graficas2D.Control
 		{
 			throw new NotImplementedException();
 		}
-
+		/// <summary>
+		/// Not implemented!
+		/// </summary>
+		/// <param name="expresion"></param>
+		/// <param name="variableADerivar"></param>
+		/// <exception cref="NotImplementedException"></exception>
+		/// <returns></returns>
 		public double EvaluarDerivada4(string expresion, string variableADerivar)
 		{
 			throw new NotImplementedException();

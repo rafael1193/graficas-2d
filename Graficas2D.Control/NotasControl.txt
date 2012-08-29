@@ -1,5 +1,6 @@
 ﻿***v1.1.0.0***
 [Arreglado] "-" unario correctamente identificado
+[Arreglado] bugs en el interprete
 [Nueva caracteristica] funciones negación (neg), máximo (max), mínimo (min), "y" lógico (and), "o" lógico (or) y "no" lógico (not)
 [Nueva caracteristica] clase SetOfPoints para dibujar puntos aislados
 ***v1.0.0.0***
