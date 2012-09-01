@@ -27,36 +27,58 @@
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using Graficas2D.Control;
 
 namespace Graficas2D.Aplicacion
 {
     public partial class RPNForm : Form
     {
-        CalculadoraRPN calc = new CalculadoraRPN();
         Padre padre;
         Graficas2D.Control.ICalculadora calculadora;
+        
+        SortedList<string,double> vars;
 
         double ans;
 
         public RPNForm()
         {
-            InitializeComponent();
+            new RPNForm(null);
         }
 
         public RPNForm(Padre MDIPadre)
         {
-            InitializeComponent();
-            padre = MDIPadre;
+        	InitializeComponent();
+        	padre = MDIPadre;
+        	
+        	calculadora = padre.ObtenerCalculadoraDelUsuario();
+
+        	UpdateVariableGrid();
+
+        }
+        
+        private void UpdateVariableGrid()
+        {
+        	vars = calculadora.Variables;
+        	varDataGridView.RowCount = vars.Keys.Count;
+        	
+        	int row = 0;
+        	foreach(string nameVar in vars.Keys)
+        	{
+        		varDataGridView.Rows[row].Cells[0].Value = nameVar;
+        		varDataGridView.Rows[row].Cells[1].Value = vars[nameVar];
+        		
+        		row++;
+        	}
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                calculadora = padre.ObtenerCalculadoraDelUsuario();
-                calculadora.EliminarVariable("x");
-                calculadora.EliminarVariable("t");
+                //calculadora = padre.ObtenerCalculadoraDelUsuario();
+                //calculadora.EliminarVariable("x");
+                //calculadora.EliminarVariable("t");
 
                 calculadora.ModificarVariable("ans", ans);
 
@@ -66,6 +88,8 @@ namespace Graficas2D.Aplicacion
 
                 richTextBox1.Text = "<: " + textBox1.Text + '\n' + richTextBox1.Text;
                 richTextBox1.Text = ":> " + (num).ToString() + '\n' + richTextBox1.Text;
+                
+                UpdateVariableGrid();
             }
             catch (Exception ex)
             {
@@ -74,8 +98,6 @@ namespace Graficas2D.Aplicacion
 
             textBox1.Focus();
             textBox1.SelectAll();
-
-
 
             //try
             //{
@@ -109,40 +131,6 @@ namespace Graficas2D.Aplicacion
             errorProvider1.Clear();
         }
 
-        private void RPNForm_HelpButtonClicked(object sender, CancelEventArgs e)
-        {
-            string a = "La Notación Polaca Inversa,(en inglés, Reverse polish notation, o RPN), es un método algebraico alternativo de introducción de datos. A diferencia de la notación algebraica, en la notación polaca inversa primero están los operandos y después viene el operador que va a realizar los cálculos sobre ellos. Este tipo de notación no necesitan usar paréntesis para indicar el orden de las operaciones.\n";
-            string b = "\nEjemplos:\n";
-            string c = "  5 1 2 + 4 * + 3 - = 5+((1+2)*4)-3\n";
-            string d = "  4 3 + 2 raiz == √(4+3)\n";
-            string f = "\nOperadores:\n";
-            string f1 = " x y + = x+y\n";
-            string f2 = " x y - = x-y\n";
-            string f3 = " x y * = x*y\n";
-            string f4 = " x y / = x/y\n";
-            string f5 = " x - = -x\n";
-            string g = " x sen = sin(x)\n";
-            string h = " x cos = cos(x)\n";
-            string i = " x tan = tan(x)\n";
-            string j = " x asen = asin(x)\n";
-            string k = " x acos = acos(x)\n";
-            string l = " x atan = atan(x)\n";
-            string m = " x y ^ = x^y\n";
-            string n = " x y raiz = (y)√(x)\n";
-            string o = " x raiz2 = √(x)\n";
-            string p = " x raiz3 = (3)√(x)\n";
-            string q = " x y log = log(y)de(x)\n";
-            string r = " x log10 = log(10)de(x)\n";
-            string r2 = " x abs = abs(x)\n";
-            string s = " pi = constante π (3,1415926...)\n";
-            string t = " e = constante e (2,7182818...)\n";
-            string z = " ant = Ans (resultado anterior)\n";
-
-            MessageBox.Show(a + b + c + d + f + f1 + f2 + f3 + f4 + f5 + g + h + i + j + k + l + m + n + o + p + q + r + r2 + s + t + z);
-
-            e.Cancel = true;
-        }
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '\r')
@@ -150,5 +138,20 @@ namespace Graficas2D.Aplicacion
                 button1_Click(this, new EventArgs());
             }
         }
+	
+		void VarDataGridViewCellEndEdit(object sender, System.Windows.Forms.DataGridViewCellEventArgs e)
+		{
+			string nameVar = varDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+			double oldValue = double.Parse(varDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+			try
+			{
+				vars[nameVar] = double.Parse(varDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
+			}
+			catch (Exception ex)
+			{
+				vars[nameVar] = oldValue;
+				varDataGridView.Rows[e.RowIndex].Cells[1].Value = oldValue;
+			}
+		}
     }
 }
